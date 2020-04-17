@@ -12,6 +12,17 @@ class V3:
     def normalize(self):
         d = math.sqrt(self.x*self.x+self.y*self.y+self.z*self.z)
         return V3(self.x / d, self.y / d, self.z / d)
+    
+    def __sub__(self, a):
+        r = V3(self.x - a.x, self.y - a.y, self.z - a.z)
+        return r
+
+    def __div__(self, a):
+        if type(a) == int or type(a) == float:
+            r = V3(self.x/a, self.y/a, self.z/a)
+        else:
+            r = V3(self.x/a.x, self.y/a.y, self.z/a.z)
+        return r
 
 class Tri:
     """A 3d triangle"""

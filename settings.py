@@ -17,10 +17,11 @@ BIAS = True
 # Strength of the above bias, relative to 1.0 strength for the input gradients
 BIAS_STRENGTH = 0.01
 
+B = 32
 # Default bounds to evaluate over
-XMIN = -3
-XMAX = 3
-YMIN = -3
-YMAX = 3
-ZMIN = -3
-ZMAX = 3
+XMIN = -B
+XMAX = B
+YMIN = -B
+YMAX = B
+ZMIN = -B
+ZMAX = B
